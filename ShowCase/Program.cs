@@ -36,3 +36,5 @@ class Program
 }
 
 // Dette er en testkommentar for å bekrefte at workflow blir trigget
+
+// Dette er en testkommentar for å bekrefte at testfila blir trigget i workflow
