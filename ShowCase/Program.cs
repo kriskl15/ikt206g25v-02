@@ -34,3 +34,5 @@ class Program
         }
     }
 }
+
+// Dette er en testkommentar for å bekrefte at workflow blir trigget
