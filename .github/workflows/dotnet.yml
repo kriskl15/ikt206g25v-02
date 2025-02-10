@@ -25,4 +25,11 @@ jobs:
     - name: Build
       run: dotnet build StringLibrary.sln --no-restore 
     - name: Test
-      run: dotnet test StringLibrary.sln --no-build --verbosity normal
+      run: dotnet test StringLibraryTest/StringLibraryTest.csproj --no-build --verbosity normal --logger "trx;LogFileName=test-results.trx"
+
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: Test Results
+        path: StringLibraryTest/TestResults/test-results.trx
